@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar  8 14:34:09 2018
+Created on Sat Mar 10 06:07:52 2018
 
-Porovnavanie viacriadkovych textov priamo v skripte pomocou dictionaries
+@author: peterm
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  8 14:34:09 2018
 
 @author: lynx_pmaklary
 """
@@ -22,23 +27,12 @@ game
 
 
 def txtBuncToDict(txtBunch):
-    pos = 0
     dct = {}
-    oneLine = ""
-    for c in txtBunch:
-        if pos == 0 : 
-            pos = 1
-            continue
-        if c == '\n' :
-           try:
-               dct[oneLine] += 1
-           except KeyError:
-               dct[oneLine] = 1
-            
-           oneLine = ""
-        else:
-            oneLine += c
-        pos += 1
+    for line in txtBunch.splitlines()[1:] :     # prvy - prazdny ignorujeme
+       try:
+           dct[line] += 1
+       except KeyError:
+           dct[line] = 1        
     return dct        
 
 dctA = txtBuncToDict(txtBunchA)
