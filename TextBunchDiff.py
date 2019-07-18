@@ -5,13 +5,6 @@ Created on Sat Mar 10 06:07:52 2018
 @author: peterm
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar  8 14:34:09 2018
-
-@author: lynx_pmaklary
-"""
-
 txtBunchA = """
 alfa
 beta
